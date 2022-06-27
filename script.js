@@ -10,6 +10,25 @@ keys.addEventListener('click', e => {
         const displayedNum = display.textContent;
         const previousKeyType = calculator.dataset.previousKeyType
 
+        if (!action){
+            if (displayedNum === '0' || previousKeyType === 'operator'){
+                display.textContent = keyContent;
+            } else {
+                display.textContent = displayedNum + keyContent;
+        }}
+
+        if (action === 'decimal'){
+            display.textContent = displayedNum + "."
+        }
+
+        if (action === 'calculate'){
+            const firstValue = calculator.dataset.firstValue;
+            const operator = calculator.dataset.operator;
+            const secondValue = displayedNum;
+
+            display.textContent = calculate(firstValue, operator, secondValue);
+        }
+
         if (!action) {
             console.log('number key')
         } else if (
@@ -46,35 +65,6 @@ keys.addEventListener('click', e => {
          
     }
 
-    if (e.target.matches('button')){
-        const key = e.target;
-        const action = key.dataset.action;
-        const keyContent = key.textContent;
-        const displayedNum = display.textContent;
-        const previousKeyType = calculator.dataset.previousKeyType
-
-        if (!action){
-            if (displayedNum === '0' || previousKeyType === 'operator'){
-                display.textContent = keyContent;
-                
-            } else {
-                display.textContent = displayedNum + keyContent;
-        }}
-
-        if (action === 'decimal'){
-            display.textContent = displayedNum + "."
-        }
-
-        if (action === 'calculate'){
-            const firstValue = calculator.dataset.firstValue;
-            const operator = calculator.dataset.operator;
-            const secondValue = displayedNum;
-
-            display.textContent = calculate(firstValue, operator, secondValue);
-        }
-    }
-
-    
 })
 
 const calculate = (n1, operator, n2) => {
