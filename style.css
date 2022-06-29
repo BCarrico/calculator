@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: lightgray;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+
+}
+
+.calculatorDisplay {
+display: flex;
+text-align: end;
+height: 72px;
+font-size: 60px;
+padding-right: 4px;
+justify-content: flex-end;
+background-color: rgb(97, 97, 97);
+border-radius: 3px;
+color: rgb(212, 211, 211);
+}
+
+.calculatorKeys {
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+}
+
+.key--operator {
+    background-color: orange;
+}
+
+button {
+    flex: 1 25%;
+    border-color: black;
+    border-width: thin;
+    font-size: 16px;
+}
+
+
+
+.decimalbutton, .clearbutton, .bsbutton {
+    background-color: lightblue;
+}
+
+.equalsbutton {
+    background-color: lightgreen;
+}
+
+

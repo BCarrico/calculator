@@ -2,30 +2,31 @@
     <head>
         <meta charset="UTF-8">
         <title>Calculator</title>
+        <link rel="stylesheet" href="style.css">
         <script src="script.js" defer></script>
     </head>
     <body>
         <div class="calculator">
             <div class="calculatorDisplay">0</div>
-            <div class ="calculatorKeys">
-                <button data-action="clear">AC</button>
-                <button data-action="backspace">Backspace</button>
+            <div class ="calculatorKeys"> 
+                <button data-action="clear" class="clearbutton">AC</button>
+                <button data-action="backspace" class ="bsbutton">Backspace</button>
                 <button data-action="divide" class="key--operator" id="divide"> / </button>
                 <button data-action="multiply" class="key--operator" id="multiply"> X </button>
-                <button data-action="add" class="key--operator" id="add"> + </button>
-                <button data-action="subtract" class="key-operator" id="subtract"> - </button>
-                <button data-action="decimal">.</button>
-                <button class="numbuttons" id="0">0</button>
                 <button class="numbuttons" id="1">1</button>
                 <button class="numbuttons" id="2">2</button>
                 <button class="numbuttons" id="3">3</button>
+                <button data-action="add" class="key--operator" id="add"> + </button>
                 <button class="numbuttons" id="4">4</button>
                 <button class="numbuttons" id="5">5</button>
                 <button class="numbuttons" id="6">6</button>
+                <button data-action="subtract" class="key--operator" id="subtract"> - </button>
                 <button class="numbuttons" id="7">7</button>
                 <button class="numbuttons" id="8">8</button>
                 <button class="numbuttons" id="9">9</button>
-                <button data-action="calculate" class="equalsbutton" id="=">=</button>
+                <button class="numbuttons" id="0">0</button>
+                <button data-action="decimal" class="decimalbutton">.</button>
+                <button data-action="calculate" class="equalsbutton" id="=">=</button>    
             </div>
         </div>
     </body>
